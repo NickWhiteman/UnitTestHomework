@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryVariables", "LibraryVariables\LibraryVariables.csproj", "{D2A6CD2E-7557-4441-BC10-150E78B7B390}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibrary", "TestLibrary\TestLibrary.csproj", "{A4969633-CC2B-4059-8EBE-149E59C6C61E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrararyVariables.Tests", "LibrararyVariables.Tests\LibrararyVariables.Tests.csproj", "{F607F552-A72D-46D8-AFBF-F8320D1DF14D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2A6CD2E-7557-4441-BC10-150E78B7B390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A6CD2E-7557-4441-BC10-150E78B7B390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A6CD2E-7557-4441-BC10-150E78B7B390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A6CD2E-7557-4441-BC10-150E78B7B390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4969633-CC2B-4059-8EBE-149E59C6C61E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4969633-CC2B-4059-8EBE-149E59C6C61E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4969633-CC2B-4059-8EBE-149E59C6C61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4969633-CC2B-4059-8EBE-149E59C6C61E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F607F552-A72D-46D8-AFBF-F8320D1DF14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F607F552-A72D-46D8-AFBF-F8320D1DF14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F607F552-A72D-46D8-AFBF-F8320D1DF14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F607F552-A72D-46D8-AFBF-F8320D1DF14D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
