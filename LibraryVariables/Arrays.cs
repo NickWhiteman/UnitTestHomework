@@ -161,5 +161,124 @@ namespace LibraryVariables
             return array;
         }
 
+        //Методы Двумерных массивов
+
+        public static int GetMinElemTwoDimensionalArrays(int[,] array)
+        {
+            int min = array[0, 0];
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if (array[i, j] < min)
+                    {
+                        min = array[i, j];
+                    }
+                }
+            }
+            return min;
+        }
+
+        public static int GetMaxElemTwoDimensionalArrays(int[,] array)
+        {
+            int max = array[0, 0];
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if (array[i, j] > max)
+                    {
+                        max = array[i, j];
+                    }
+                }
+            }
+            return max;
+        }
+
+        public static int[] GetIndexMinElemTwoDimensionalArrays(int[,] array)
+        {
+            int min = array[0, 0];
+            int[] minIndex = new int[2];
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if (array[i, j] < min)
+                    {
+                        min = array[i, j];
+                        minIndex[0] = i;
+                        minIndex[1] = j;
+                    }
+                }
+            }
+            return minIndex;
+        }
+
+        public static int[] GetIndexMaxElemTwoDimensionalArrays(int[,] array)
+        {
+            int max = array[0, 0];
+            int[] maxIndex = new int[2];
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if (array[i, j] > max)
+                    {
+                        max = array[i, j];
+                        maxIndex[0] = i;
+                        maxIndex[1] = j;
+                    }
+                }
+            }
+            return maxIndex;
+        }
+
+        public static int[,] GetTransponingTwoDimansionalArrays(int[,] array)
+        {
+            int[,] transponingArray = new int[array.GetLength(1), array.GetLength(0)];
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    transponingArray[j,i] = array[i, j];
+                }
+            }
+            return transponingArray;
+        }
+
+        public static int GetCountElemGreaterNeighbors(int[,] array)
+        {
+            //Решение сделано неправильно, перепешу и этот коментарий будет удален
+            int countElement = 0;
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if ((i - 1 < 0) || (array[i, j] > array[i - 1, j]))
+                    {
+                        countElement++;
+                    }
+                    else if ((j - 1 < 0) || (array[i, j] > array[i, j - 1]))
+                    {
+                        countElement++;
+                    }
+                    else if ((i + 1 < 0) || (array[i, j] > array[i + 1, j]))
+                    {
+                        countElement++;
+                    }
+                    else if ((j + 1 < 0) || (array[i, j] > array[i, j + 1]))
+                    {
+                        countElement++;
+                    }
+                }
+            }
+            return countElement;
+        }
     }
 }
