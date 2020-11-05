@@ -253,26 +253,18 @@ namespace LibraryVariables
 
         public static int GetCountElemGreaterNeighbors(int[,] array)
         {
-            //Решение сделано неправильно, перепешу и этот коментарий будет удален
             int countElement = 0;
 
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    if ((i - 1 < 0) || (array[i, j] > array[i - 1, j]))
-                    {
-                        countElement++;
-                    }
-                    else if ((j - 1 < 0) || (array[i, j] > array[i, j - 1]))
-                    {
-                        countElement++;
-                    }
-                    else if ((i + 1 < 0) || (array[i, j] > array[i + 1, j]))
-                    {
-                        countElement++;
-                    }
-                    else if ((j + 1 < 0) || (array[i, j] > array[i, j + 1]))
+                    if (
+                        (i - 1 < 0 || array[i, j] > array[i - 1, j]) &&
+                        (i + 1 > array.GetLength(0) - 1 || array[i, j] > array[i  + 1, j]) &&
+                        (j - 1 < 0 || array[i, j] > array[i, j - 1]) &&
+                        (j + 1 > array.GetLength(1) - 1 || array[i, j] > array[i, j + 1])
+                        )
                     {
                         countElement++;
                     }

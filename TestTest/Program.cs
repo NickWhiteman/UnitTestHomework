@@ -10,7 +10,7 @@ namespace TestTest
             int[,] array = new int[,]
             {
                 { 2, 4, 6, 1 },
-                { 0, 3, 7, 1 },
+                { 0, 3, 1, 7 },
                 { 1, 9, 8, 1 }
             };
 
